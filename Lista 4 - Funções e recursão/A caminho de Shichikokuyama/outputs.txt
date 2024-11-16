@@ -1,0 +1,57 @@
+EXPECTED OUTPUT 1:
+Lembrei! A sílaba shi está no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: ko, chi estão no nome do hospital. Obrigada, Totoro!
+A palavra kuya está toda no nome do hospital. Acertou em cheio, Totoro!
+Lembrei! A sílaba ma está no nome do hospital. Obrigada, Totoro!
+Conseguimos lembrar o nome do hospital shichikokuyama, agora é só pegar o Catbus e ir até lá!
+
+ACTUAL OUTPUT 1:
+Lembrei! A sílaba shi está no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: ko, chi estão no nome do hospital. Obrigada, Totoro!
+A palavra kuya está toda no nome do hospital. Acertou em cheio, Totoro!
+Lembrei! A sílaba ma está no nome do hospital. Obrigada, Totoro!
+Conseguimos lembrar o nome do hospital shichikokuyama, agora é só pegar o Catbus e ir até lá!
+
+
+EXPECTED OUTPUT 2:
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba shi está no nome do hospital. Obrigada, Totoro!
+Lembrei! A sílaba chi está no nome do hospital. Obrigada, Totoro!
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba ko está no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: ku, ma estão no nome do hospital. Obrigada, Totoro!
+Lembrei! A sílaba ya está no nome do hospital. Obrigada, Totoro!
+Conseguimos lembrar o nome do hospital shichikokuyama, agora é só pegar o Catbus e ir até lá!
+
+ACTUAL OUTPUT 2:
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba shi está no nome do hospital. Obrigada, Totoro!
+Lembrei! A sílaba chi está no nome do hospital. Obrigada, Totoro!
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba ko está no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: ku, ma estão no nome do hospital. Obrigada, Totoro!
+Lembrei! A sílaba ya está no nome do hospital. Obrigada, Totoro!
+Conseguimos lembrar o nome do hospital shichikokuyama, agora é só pegar o Catbus e ir até lá!
+
+
+EXPECTED OUTPUT 3:
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba ya está no nome do hospital. Obrigada, Totoro!
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba ma está no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: chi, shi estão no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: ko, ku estão no nome do hospital. Obrigada, Totoro!
+Conseguimos lembrar o nome do hospital shichikokuyama, agora é só pegar o Catbus e ir até lá!
+
+ACTUAL OUTPUT 3:
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba ya está no nome do hospital. Obrigada, Totoro!
+Infelizmente nenhuma dessas sílabas me lembrou do nome do hospital, Totoro.
+Lembrei! A sílaba ma está no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: chi, shi estão no nome do hospital. Obrigada, Totoro!
+Lembrei! As sílabas: ko, ku estão no nome do hospital. Obrigada, Totoro!
+Conseguimos lembrar o nome do hospital shichikokuyama, agora é só pegar o Catbus e ir até lá!
