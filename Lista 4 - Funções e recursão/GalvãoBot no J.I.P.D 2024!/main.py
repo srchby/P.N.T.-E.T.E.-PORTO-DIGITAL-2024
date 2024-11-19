@@ -4,52 +4,52 @@ def createPlayers(*args):
     player = input()
     playerInfo = player.split("-")
     
-    if len(playerInfo) == 3:
-        if playerInfo[1] == 'reserva':
-            if playersPosition.count('reserva') < 3:
+    if len(playerInfo) == 3: # se input for {jogador}-{posição}-{peso}, continua
+        if playerInfo[1] == 'reserva': # se posição for reserva, continua
+            if playersPosition.count('reserva') < 3: # se tiver 2 ou menos reservas no time, adiciona
                 playersName.append(playerInfo[0])
                 playersPosition.append(playerInfo[1])
                 playersWeight.append(int(playerInfo[2]))  
-            else:
+            else: # se qtd de reservas maior ou igual a 3, mostra mensagem
                 return print("Amigo, eu vou te falar só uma coisa... Olha essa formação aí!")
-        else:
-            if playerInfo[1] in POSITIONS and playerInfo[1] not in playersPosition:
+        else: # se input for qualquer posição menos reserva, continua
+            if playerInfo[1] in POSITIONS and playerInfo[1] not in playersPosition: # se a posição do jogador for valido e não repetida, variavel booleana
                 validPosition = True
-            if playerInfo[0] not in playersName:
+            if playerInfo[0] not in playersName: # se nome for válido, variavel booleana
                 validName = True
-            if validPosition and validName:
+            if validPosition and validName: # se tudo estiver valido, adiciona ao time
                 playersName.append(playerInfo[0])
                 playersPosition.append(playerInfo[1])
                 playersWeight.append(int(playerInfo[2]))
-            else:
+            else: # se algo não estiver valido, mostra mensagem
                 return print("Amigo, eu vou te falar só uma coisa... Olha essa formação aí!")
-    elif len(playerInfo) == 1:
+    elif len(playerInfo) == 1: # se input for {jogador}, continua
         if playersPosition.count('reserva') < 3:
             playersName.append(playerInfo[0])
             playersPosition.append('reserva')
             playersWeight.append(3)
-        else:
+        else: # se 3 ou mais reservas, mostra mensagem
             return print("Amigo, eu vou te falar só uma coisa... Olha essa formação aí!")
-    else:
+    else: # qualquer outro caso estranho, mostra mensagem
         return print("Amigo, eu vou te falar só uma coisa... Olha essa formação aí!")
     
-    if args:
+    if args: # se o jogador for adicionado no loop while true
         return print(f'Ele veste a camisa, é com garra, é com amor. {playerInfo[0]} representando como {playersPosition[-1]}.')
 
 def teamCallout():
-    if not playersName:
+    if not playersName: # se a quantidade de jogadores for zero, para
         return print("Não é possível, Arnaldo!")        
-    for i in range(len(playersName)):
+    for i in range(len(playersName)): # se não for, mostra jogadores
         print(f"{playersName[i]}-{playersPosition[i]}")  
     
     return
 
 def rating(*args):
-    rate = sum(playersWeight)
+    rate = sum(playersWeight) # soma dos pesos
     
-    if args:
+    if args: # para somente a nota do time, retorna a nota
         return rate
-    else:
+    else: # caso não precise da nota, continua
         if rate < 25:
             print(f"A zaga tá batendo cabeça, o meio de campo tá perdido, sem criatividade. E o ataque? Isolado, sem receber uma bola decente! Assim não dá!. No máximo, o {team} é uns {rate} na escala!")
         elif rate > 25 and rate < 45:
@@ -67,15 +67,15 @@ def match():
     
     if factor == "A verdade é que a situação tá complicada... A favor desse time, não tem nada!":
         pass
-    else:
+    else: # para qualquer mensagem menos a de cima, continua
         teamFactor = factor.split(",")
         matchRating += len(teamFactor)
         
-    if "1" in rivalName:
+    if "1" in rivalName: # se o rival for do 1° ano, adiciona a nota
         matchRating +=  2
-    elif "3" in rivalName:
+    elif "3" in rivalName: # se o rival for do 2° ano, retira da nota
         matchRating -= 2
-    
+    # dificuldades do rival
     if rivaldiff == "fácil":
         if matchRating >= 25:
             win = True
@@ -86,10 +86,10 @@ def match():
         if matchRating >= 45:
             win = True
     
-    if win:
+    if win: # caso vitória, mostra mensagem e retorna variavel booleana
         print(f'O apito final confirma a vitória! QUE ESPETÁCULO DO {team}. No fim, não teve como pro {rivalName}! Isso é futebol, meus amigos!')
         return win
-    else:
+    else: # caso derrota, mostra mensagem
         return print(f"Que tristeza, amigo! O time lutou, mas não conseguiu segurar o resultado. A torcida do {team}, que esteve em peso, agora vai embora cabisbaixa, dando espaço pro avanço do {rivalName}.")
         
 NAMES = ["emerson.novaera", "erick.daselva", "valdelas", "marcella.linda123", "tamys.silva_br", "levi.ackerman", "mec.programadora", "alex_do_gerah"]
@@ -98,28 +98,28 @@ playersName, playersPosition, playersWeight = [], [], []
 
 name = input()
 
-if name in NAMES:
+if name in NAMES: # se nome for válido na lista, continua
     pass
-else: 
+else: # se não for, para
     print("Desse jeito, vai complicar, meu amigo! Usuário da comissão não encontrado.")
     quit()
 
 team = input()
 teamQty = int(input())
 
-if teamQty <= 8:
+if teamQty <= 8: # se qtd de jogadores for menor ou igual a 8, adiciona jogadores
     for i in range(teamQty):
         createPlayers()
-elif teamQty == 0:
+elif teamQty == 0: # se qtd de jogadores for zero, mostra mensagem
     print("Não é possível, Arnaldo!")    
-else:
+else: # para qualquer outro caso, continua
     pass
 
 teamCallout()
 
 while True:
     action = input()
-    
+    #casos para cada ação
     if action == "Quero agradecer de coração a você que nos acompanhou!":
         break
     elif action == "Olha só, amigo! Vamos pra mais da escalação do time:":
